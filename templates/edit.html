@@ -1,0 +1,29 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+  <form action="/students/edit/{{student.id}}" method = "POST">
+
+    </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text"  value="{{student.name}}" class="form-control" id="name" placeholder="Name" name="name">
+
+  </div>
+  <div class="form-group">
+  <label for="course">Course</label>
+  <input type="text"  value="{{student.course}}" class="form-control" id="course"  placeholder="Course" name="course">
+
+</div>
+<div class="form-group">
+<label for="age">Age</label>
+<input type="number" value="{{student.age}}" class="form-control" id="age"  placeholder="Age" name="age">
+<input type="number" value="{{student.id}}" class="form-control" id="id"  name="id">
+
+</div>
+  <button type="submit" class="btn btn-primary">Edit Records</button>
+  
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+  <p>Welcome {{name}} to the {{course}} class. We shall be contacting you on your email <i>{{email}}</i></p>
+  <div>
+    <a href="/edit"><button type="button" name="button">Edit this information</button></a>
+  </div>
+</div>
+{% endblock %}

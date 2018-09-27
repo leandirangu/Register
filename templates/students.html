@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+    <tr>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        <td>{{student.username}}</td>
+        <td>{{student.name}} </td>
+        <td>{{student.course}}</td>
+        <td>{{student.age}}</td>
+        <td><a href="/students/edit/{{student.id}}">Edit</a></td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+    </table>
+  </div>
+</body>
+{% endblock %}
